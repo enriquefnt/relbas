@@ -10,7 +10,9 @@
 <?php
 $caso = [];
 	foreach ($result as $caso) {
- echo $caso['Nombre'] . ' ' . $caso['Apellido'] . '<br>' ;
+ echo $caso['Nombre'] . ' ' . $caso['Apellido'] .' ' . 
+ 	 $caso['Nacimiento'] .' ' .
+ 			$caso['AOP'] .'<br>' ;
 	}
 ?>
 </p></div>
