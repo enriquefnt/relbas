@@ -1,0 +1,22 @@
+* {
+	padding: o;
+	margin: 0;
+}
+
+div {
+	margin: 10px;
+	border: all;
+	color: white;
+	background-color: black;
+	display: inline-flex;
+	width: 50%;
+	text-align: center;
+	padding:auto ;
+	text-decoration: none;
+}
+
+p {
+	color: yellow;
+	font-family: sans-serif;
+	line-height: 30px;
+}

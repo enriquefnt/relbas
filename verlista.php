@@ -4,8 +4,10 @@ include __DIR__ . '/funciones.php';
 
 $result = findAll($pdo, 'persona');
 
-$caso = [];
+/*$caso = [];
 	foreach ($result as $caso) {
  echo $caso['Nombre'] . '<br>' . '<br>';
 
 	}
+*/
+include __DIR__ . '/verlista.html.php';

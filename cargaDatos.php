@@ -5,7 +5,7 @@ include __DIR__ . '/conect.php';
 include __DIR__ . '/funciones.php';
 
 
-//	if (isset($_POST['Nombre'])) {
+if (isset($_POST['Nombre'])) {
 
 $record = [
  							'Nombre' => $_POST['Nombre'],
@@ -13,9 +13,10 @@ $record = [
 						  'Nacimiento' =>$_POST['Nacimiento']];
 insert($pdo, 'persona', $record);
 
+
 					 
 	//	header('location: jokes.php');  
-//}
+}
 	
 
 		include  __DIR__ . '/cargaDatos.html.php';

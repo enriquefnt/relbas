@@ -2,17 +2,18 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Lista</title>
 </head>
 <body>
-
+	<div><p>
 <?php
-
-$result=findAll($pdo, $persona)
-$caso[];
-foreach ($result as $caso){
-	echo "string";
-}
+$caso = [];
+	foreach ($result as $caso) {
+ echo $caso['Nombre'] . ' ' . $caso['Apellido'] . '<br>' ;
+	}
 ?>
+</p></div>
 </body>
 </html>
+
