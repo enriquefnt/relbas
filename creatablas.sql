@@ -1,3 +1,5 @@
+CREATE DATABASE `baserel` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+
 CREATE TABLE `control` (
   `idcontrol` int(11) NOT NULL AUTO_INCREMENT,
   `idPersona` varchar(45) NOT NULL,
@@ -12,5 +14,6 @@ CREATE TABLE `persona` (
   `Nombre` int(11) NOT NULL,
   `Apellido` varchar(45) NOT NULL,
   `Nacimiento` date NOT NULL,
+  `AreaOperativa` varchar(45) NOT NULL,
   PRIMARY KEY (`idPersona`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
