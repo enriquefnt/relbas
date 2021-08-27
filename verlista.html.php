@@ -6,7 +6,8 @@
 	<title>Lista</title>
 </head>
 <body>
-	<div><p>
+	<div>
+		<p>
 <?php
 $caso = [];
 	foreach ($result as $caso) {
@@ -15,7 +16,13 @@ $caso = [];
  			$caso['AOP'] .'<br>' ;
 	}
 ?>
-</p></div>
+</p>
+</div>
+<div>
+<a href="index.html">Volver</a>
+<br><br>
+<a href="cargaDatos.php">Cargar</a>
+</div>
 </body>
 </html>
 

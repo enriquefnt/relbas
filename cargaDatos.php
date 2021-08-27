@@ -13,15 +13,14 @@ $record = [
 							 	'Nacimiento' =>$_POST['Nacimiento'],
 							    'AOP' =>$_POST['AOP']];
 insert($pdo, 'persona', $record);
+		 
+
+}
 
 $result = findAll($pdo, 'aopzonas');
-					 
-	//	header('location: jokes.php');  
-}
 	
 
 		include  __DIR__ . '/cargaDatos.html.php';
 
 	
 
-//include  __DIR__ . '/../templates/layout.html.php';

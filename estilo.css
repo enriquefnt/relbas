@@ -20,3 +20,20 @@ p {
 	font-family: sans-serif;
 	line-height: 30px;
 }
+
+form {
+text-align: left;	
+  font: 1em sans-serif;
+  max-width: 320px;
+  background-color: #ccc;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  display: block;
+  background-color: #yellow;
+}
