@@ -17,9 +17,7 @@
   <input type="text" required="required" id="Apellido" name="Apellido" value=""><br><br>
   <label for="Nacimiento">Fecha de Nacimiento:</label><br>
   <input type="date" id="Nacimiento" name="Nacimiento" value=""><br><br>
-
-
-<label for="AOP">Area Operativa:</label>
+  <label for="AOP">Area Operativa:</label>
 
 <select name="AOP" required="required" id="AOP">
 <option value=0>Seleccione AOP</option>
@@ -32,9 +30,39 @@ $aop = [];
 </select>
   <input type="submit" value="Cargar">
 </form> 
+
 </fieldset>
-	</div>
-</form>
+</div>
+
+<div>
+    <fieldset>
+      <legend>Control</legend>
+<form action="" method="post">
+  
+   
+  <input type="hidden" name="idPersona" id=<?php$_POST['idPersona']?> 
+  <label for="FechaControl">Fecha de control:</label><br>
+  <input type="date" id="FechaControl" name="FechaControl" value=""><br><br>
+  <label for="Peso">Peso</label><br>
+ <input type="number" step="0.01" id="Peso" name="Peso" value=""><br><br>
+ <label for="Peso">Talla</label><br>
+ <input type="number" step="0.01" id="Talla" name="Talla" value=""><br><br>
+ <label for="Observaciones">Observaciones:</label><br>
+<textarea id="Observaciones" name="Observaciones" rows="3" cols="40">
+</textarea>
+
+
+<input type="submit" value="Cargar">
+
+</form> 
+
+</fieldset>
+</div>
+
+
+
+
+
 <div>
 <a href="index.html">Volver</a>
 <br>

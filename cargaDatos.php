@@ -17,6 +17,17 @@ insert($pdo, 'persona', $record);
 
 }
 
+if (isset($_POST['FechaControl'])) {
+
+	$control=[
+		'FechaControl'=> $_POST['FechaControl'],
+		'Peso' => $_POST['Peso'],
+		'Talla' => $_POST['Talla'],
+		'Observaciones' => $_POST['Observaciones']];
+
+insert($pdo, 'control', $control);
+}
+
 $result = findAll($pdo, 'aopzonas');
 	
 

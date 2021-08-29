@@ -1,5 +1,5 @@
-CREATE USER IF NOT EXISTS 'baseuser'@'localhost'
-IDENTIFIED BY 'baseuser' ;
+CREATE USER IF NOT EXISTS 'enriquefnt'@'localhost'
+IDENTIFIED BY 'enfi7625' ;
 GRANT ALL PRIVILEGES 
 ON *.* 
-TO baseuser@localhost;
+TO enriquefnt@localhost;
