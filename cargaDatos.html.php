@@ -29,35 +29,7 @@ $aop = [];
 ?>
 </select>
   <input type="submit" value="Cargar">
-</form> 
 
-</fieldset>
-</div>
-
-<div>
-    <fieldset>
-      <legend>Control</legend>
-<form action="" method="post">
-  
-   
-  <input type="hidden" name="idPersona" id=<?php$_POST['idPersona']?> 
-  <label for="FechaControl">Fecha de control:</label><br>
-  <input type="date" id="FechaControl" name="FechaControl" value=""><br><br>
-  <label for="Peso">Peso</label><br>
- <input type="number" step="0.01" id="Peso" name="Peso" value=""><br><br>
- <label for="Peso">Talla</label><br>
- <input type="number" step="0.01" id="Talla" name="Talla" value=""><br><br>
- <label for="Observaciones">Observaciones:</label><br>
-<textarea id="Observaciones" name="Observaciones" rows="3" cols="40">
-</textarea>
-
-
-<input type="submit" value="Cargar">
-
-</form> 
-
-</fieldset>
-</div>
 
 
 

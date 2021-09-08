@@ -19,7 +19,7 @@ insert($pdo, 'control', $record);
 
 	
 
-		include  __DIR__ . '/cargaDatos.html.php';
+		include  __DIR__ . '/cargaControl.html.php';
 
 
 
