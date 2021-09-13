@@ -7,6 +7,8 @@ include __DIR__ . '/funciones.php';
 if (isset($_POST['FechaControl'])) {
 
 $record = [
+	 							'idPersona' => $_POST['idPersona'],
+	 							'Apellido' => $_POST['Apellido'],
 	 							'FechaControl' => $_POST['FechaControl'],
 							 	'Peso' => $_POST['Peso'],
 							 	'Talla' =>$_POST['Talla'],

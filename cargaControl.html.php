@@ -16,8 +16,8 @@
 
 
  <label for="dName">Buscar caso:</label><br>
-  <input type="text" name="Apellido" id="dName"/><br><br>
- <input type="hidden" id="dIdPersona"/><br><br>
+  <input type="text" name="Apellido" id="dName"><br><br>
+ <input type="hidden"name="idPersona" id="idPersona" value="idPersona"><br><br>
 
 
   <label for="FechaControl">Fecha de control:</label><br>
@@ -53,7 +53,10 @@
       ac.attach({
         target: "dName",
         data: "busca.php",
-        post: { type: "Apellido" },
+        post: {
+         keyA: "Apellido" ,
+         keyB: "idPersona" 
+       },
         // OPTIONAL
         delay : 500,
         min : 3

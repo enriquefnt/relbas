@@ -1,3 +1,10 @@
+<?php
+include __DIR__ . '/conect.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,15 +31,13 @@
 <?php
 $aop = [];
   foreach ($result as $aop) {
- echo '<option value=' .  $aop[idaop].'>' . $aop['areaoperativa'] .'</option>';
+ echo '<option value=' .  $aop['idaop'].'>' . $aop['areaoperativa'] .'</option>';
   }
 ?>
 </select>
   <input type="submit" value="Cargar">
-
-
-
-
+</fieldset>
+</div>
 
 
 <div>
