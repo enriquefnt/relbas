@@ -53,10 +53,7 @@
       ac.attach({
         target: "dName",
         data: "busca.php",
-        post: {
-         keyA: "Apellido" ,
-         keyB: "idPersona" 
-       },
+        
         // OPTIONAL
         delay : 500,
         min : 3

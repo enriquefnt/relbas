@@ -8,7 +8,7 @@ $data = [];
     $stmt->execute(["%" . $_POST['search'] . "%"]);
     while ($row = $stmt->fetch(PDO::FETCH_NAMED)) { 
       $data[] = [
-        "D" => $row['Apellido'].$row['IdPersona']
+        "D" => $row['Apellido'],
         
           ]; 
     }
