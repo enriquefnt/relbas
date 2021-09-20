@@ -12,12 +12,12 @@
 <div>
     <fieldset>
       <legend>Control</legend>
-<form action="" method="post">
+<form action="" autocomplete="off" method="post">
 
 
  <label for="dName">Buscar caso:</label><br>
   <input type="text" name="Apellido" id="dName"><br><br>
- <input type="hidden"name="idPersona" id="idPersona" value="idPersona"><br><br>
+ <input type="number"name="idPersona" id="idPersona" value="idPersona"><br><br>
 
 
   <label for="FechaControl">Fecha de control:</label><br>
@@ -52,7 +52,7 @@
           
       ac.attach({
         target: "dName",
-        data: "busca.php",
+        data: "search.php",
         
         // OPTIONAL
         delay : 500,

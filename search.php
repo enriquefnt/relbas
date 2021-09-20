@@ -9,7 +9,7 @@ $data = [];
     while ($row = $stmt->fetch(PDO::FETCH_NAMED)) { 
       $data[] = [
         "D" => $row['Apellido'],
-        
+        "didPersona" => $row['idPersona']
           ]; 
     }
     ;
@@ -20,3 +20,18 @@ if (count($data)==0) { $data = null; }
 echo json_encode($data);
 $stmt = null;
 $pdo = null;
+
+
+/*
+ $stmt = $pdo->prepare("SELECT * FROM `users` WHERE `email` LIKE ?");
+    $stmt->execute(["%" . $_POST['search'] . "%"]);
+    while ($row = $stmt->fetch(PDO::FETCH_NAMED)) { 
+      $data[] = [
+        "D" => $row['email'],
+        "dName" => $row['name'],
+        "dTel" => $row['phone']
+      ]; 
+  //  }
+  //  break;
+}
+*/

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Simple Autocomplete
+    </title>
+
+    <!-- (A) LOAD JS + CSS -->
+    <link rel="stylesheet" href="1b-autocomplete.css">
+    <script src="1c-autocomplete.js"></script>
+  </head>
+  <body>
+    
+    <h1>Multiple Fields Autocomplete</h1>
+    Email: <input type="email" id="demoB"/><br>
+    Name: <input type="text" id="dName"/><br>
+    Tel: <input type="text" id="dTel"/><br><br>
+
+    <script>
+    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
+    window.addEventListener("DOMContentLoaded", function(){
+            
+      ac.attach({
+        target: "demoB",
+        data: "2b-search.php",
+        post: { type: "email" },
+        // OPTIONAL
+        delay : 1000,
+        min : 3
+      });
+    });
+    </script>
+  </body>
+</html>
