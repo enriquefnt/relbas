@@ -6,10 +6,16 @@ $dbname = 'autocom';
 $dbchar = 'utf8';
 $dbuser = 'enriquefnt';
 $dbpass = 'enfi7625';
-$pdo = new PDO(
+
+
+
+/*$pdo = new PDO(
 	"mysql:host=$dbhost;dbname=$dbname;charset=$dbchar", 
   $dbuser, $dbpass
 );
+*/
+
+$pdo = new PDO('mysql:host=localhost;dbname=baserel;charset=utf8', 'enriquefnt', 'enfi7625');
 
 // (B) DO SEARCH
 $data = [];
@@ -26,13 +32,13 @@ $data = [];
 
   // (B3) SEARCH BY USER EMAIL (MULTIPLE FIELDS AUTOCOMPLETE)
   case "email": */
-    $stmt = $pdo->prepare("SELECT * FROM `users` WHERE `email` LIKE ?");
+    $stmt = $pdo->prepare("SELECT * FROM `persona` WHERE `Apellido` LIKE ?");
     $stmt->execute(["%" . $_POST['search'] . "%"]);
     while ($row = $stmt->fetch(PDO::FETCH_NAMED)) { 
       $data[] = [
-        "D" => $row['email'],
-        "dName" => $row['name'],
-        "dTel" => $row['phone']
+        "D" => $row['Apellido'],
+       // "dName" => $row['Nombre'],
+        "dTel" => $row['idPersona']
       ]; 
   //  }
   //  break;

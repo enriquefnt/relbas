@@ -12,7 +12,7 @@
   <body>
     
     <h1>Multiple Fields Autocomplete</h1>
-    Email: <input type="email" id="demoB"/><br>
+    Email: <input type="text" id="demoB"/><br>
     Name: <input type="text" id="dName"/><br>
     Tel: <input type="text" id="dTel"/><br><br>
 
@@ -23,7 +23,7 @@
       ac.attach({
         target: "demoB",
         data: "2b-search.php",
-        post: { type: "email" },
+       // post: { type: "email" },
         // OPTIONAL
         delay : 1000,
         min : 3
