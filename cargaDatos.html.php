@@ -19,7 +19,7 @@ include __DIR__ . '/conect.php';
 <form action="" method="post">
   
   <label for="Nombre">Nombre:</label><br>
-  <input type="text" required="required" id="dTel" name="Nombre" value=""><br><br>
+  <input type="text" required="required" id="Nombre" name="Nombre" value=""><br><br>
   <label for="Apellido">Apellido:</label><br>
   <input type="text" required="required" id="Apellido" name="Apellido" value=""><br><br>
   <label for="Nacimiento">Fecha de Nacimiento:</label><br>
@@ -43,7 +43,9 @@ $aop = [];
 <div>
 <a href="index.html">Volver</a>
 <br>
-<a href="verlista.php">Ver</a>
+<a href="cargaControl.php">Cargar control</a>
+<br>
+<a href="verlista.php">Ver Cargas</a>
 </div>
 </body>
 </html>

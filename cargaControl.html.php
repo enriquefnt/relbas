@@ -17,9 +17,7 @@
 
  <label for="dName">Buscar caso:</label><br>
   <input type="text" name="Apellido" id="dName"><br><br>
- <input type="number"name="idPersona" id="dTel" value="idPersona"><br><br>
-
-
+ <input type="hidden"name="idPersona" id="dTel" value="idPersona"><br><br>
   <label for="FechaControl">Fecha de control:</label><br>
   <input type="date" id="FechaControl" name="FechaControl" value=""><br><br>
   <label for="Peso">Peso</label><br>

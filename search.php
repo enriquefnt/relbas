@@ -4,11 +4,11 @@ include __DIR__ . '/conect.php';
 // (B) DO SEARCH
 $data = [];
 
-    $stmt = $pdo->prepare("SELECT * FROM `persona` WHERE `apellido` LIKE ?");
+    $stmt = $pdo->prepare("SELECT CONCAT(Nombre,' ',Apellido) as nomApe, idPersona FROM persona WHERE CONCAT(Nombre,' ',Apellido) LIKE ? ");
     $stmt->execute(["%" . $_POST['search'] . "%"]);
     while ($row = $stmt->fetch(PDO::FETCH_NAMED)) { 
       $data[] = [
-        "D" => $row['Apellido'],
+        "D" => $row['nomApe'],
         "dTel" => $row['idPersona']
           ]; 
     }
