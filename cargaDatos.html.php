@@ -22,9 +22,16 @@ include __DIR__ . '/conect.php';
   <input type="text" required="required" id="Nombre" name="Nombre" value=""><br><br>
   <label for="Apellido">Apellido:</label><br>
   <input type="text" required="required" id="Apellido" name="Apellido" value=""><br><br>
+  <label for="Sexo">Sexo:</label><br>
+  <select name="Sexo" id="Sexo" value="">
+    <option value='1'>Masculino</option>
+    <option value='2'>Femenino</option>
+    <option value='3'>No determinado</option>
+    </select>
+    <br><br>
   <label for="Nacimiento">Fecha de Nacimiento:</label><br>
   <input type="date" id="Nacimiento" name="Nacimiento" value=""><br><br>
-  <label for="AOP">Area Operativa:</label>
+  <label for="AOP">Area Operativa:</label><br>
 
 <select name="AOP" required="required" id="AOP">
 <option value=0>Seleccione AOP</option>
@@ -34,7 +41,7 @@ $aop = [];
  echo '<option value=' .  $aop['idaop'].'>' . $aop['areaoperativa'] .'</option>';
   }
 ?>
-</select>
+</select><br><br>
   <input type="submit" value="Cargar">
 </fieldset>
 </div>
