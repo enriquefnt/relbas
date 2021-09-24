@@ -8,7 +8,7 @@ if (isset($_POST['FechaControl'])) {
 
 $record = [
 	 							
-	 						//	'Apellido' => $_POST['Apellido'],
+	 						
 	 							'idPersona' => $_POST['idPersona'],
 	 							'FechaControl' => $_POST['FechaControl'],
 							 	'Peso' => $_POST['Peso'],

@@ -10,12 +10,13 @@
 		<p>
 <?php
 $caso = [];
-	foreach ($result as $caso) {
+	foreach ($casos as $caso) {
  echo $caso['Nombre'] . ' ' . $caso['Apellido'] .' ' . 
- 	 $caso['Nacimiento'] .' ' .
- 			$caso['AOP'] .'<br>' ;
+ 	$caso['AOP'] .' ' . $caso['Peso'].' ' . $caso['Talla'].'<br> ' 
+ ;
 	}
 ?>
+
 </p>
 </div>
 <div>
