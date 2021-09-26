@@ -1,4 +1,39 @@
-CREATE  FUNCTION `ZSCORE`(Sexo VARCHAR (10),Bus VARCHAR(1), Valor DOUBLE,FechaInicial DATE,FechaFinal DATE) RETURNS double
+Funciones_procedimientos
+
+
+
+
+CALL `baserel`.`calcula_edad`();
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `lista_simple`()
+BEGIN
+SELECT Nombre, Apellido, Sexo , areaoperativa,
+floor(DATEDIFF(FechaControl, Nacimiento)/365.25) AS años,
+floor((DATEDIFF(FechaControl, Nacimiento)%365.25)/30.4375) AS meses,
+floor(datediff(FechaControl, Nacimiento) % 30.4375) AS dias,
+Peso, Talla
+ FROM control
+right join persona on control.idPersona=persona.idPersona
+inner join aopzonas on AOP=idaop ;
+END
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `calcula_edad`()
+BEGIN
+SELECT Nombre, Apellido, Sexo , areaoperativa,
+floor(DATEDIFF(FechaControl, Nacimiento)/365.2425) AS años,
+floor((DATEDIFF(FechaControl, Nacimiento)%365.25)/30.44) AS meses,
+floor(datediff(FechaControl, Nacimiento) % 30.44) AS Dias,
+Peso, Talla
+ FROM control
+right join persona on control.idPersona=persona.idPersona
+inner join aopzonas on AOP=idaop ;
+END
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `ZSCORE`(Sexo VARCHAR (10),Bus VARCHAR(1), Valor DOUBLE,FechaInicial DATE,FechaFinal DATE) RETURNS double
 BEGIN
    
      DECLARE Calculo,L,M,S,rdoAño DOUBLE;DECLARE EdadMes INT;

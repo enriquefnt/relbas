@@ -6,7 +6,7 @@
 div {
 	margin: 10px;
 	border: all;
-	color: #fff;
+	color: black;
 	background-color: lightgrey;
 	display: inline-flex;
 	width: auto;
@@ -53,15 +53,14 @@ li a {
 
 fieldset
 {   
-		color: darkgreen;
-    border:2px solid #eee ;
+	color: darkgreen;
+    border:2px solid #ccc ;
     -moz-border-radius:8px;
     -webkit-border-radius:8px;	
     border-radius:8px;	
 }
 
 
-/* (A) AUTOCOMPLETE WRAPPER */
 .acWrap {
   display: inline-block; /* Or block if you like */
   position: relative;
@@ -76,6 +75,7 @@ fieldset
   background: #fff;
   border: 1px solid #eee;
   display: none;
+  text-align: left;
 }
 .acWrap .acSuggest ul {
   list-style: none;

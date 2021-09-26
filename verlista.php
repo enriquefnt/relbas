@@ -14,9 +14,11 @@ include __DIR__ . '/funciones.php';
 
 <?php
       try {
-            
+/*            
       $sql='SELECT * FROM control
-right join persona on control.idPersona=persona.idPersona;';
+right join persona on control.idPersona=persona.idPersona;';*/
+
+$sql='call lista_simple;';
 
 $casos = $pdo->query($sql);
 
