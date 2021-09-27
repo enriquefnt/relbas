@@ -105,3 +105,96 @@ BEGIN
      RETURN Calculo ;
 
 END
+
+
+
+
+CREATE DEFINER=`salasituacion`@`%` FUNCTION `VALORAÑO`( FechaIni DATE,FechaFin DATE) RETURNS double
+BEGIN
+       DECLARE DI INT;DECLARE MI INT;DECLARE AI INT;DECLARE DF INT; DECLARE MF INT;DECLARE AF INT;
+       DECLARE DtoIni VARCHAR(3);DECLARE DtoFin VARCHAR(3);DECLARE AñoIni DOUBLE;DECLARE AñoFin DOUBLE;
+       DECLARE DifIni DOUBLE;DECLARE DifFin DOUBLE;DECLARE rdoAño DOUBLE;DECLARE AñoMedio DOUBLE;
+    
+       SET DI=(SELECT DAY(FechaIni));   #Selecciona el día
+       SET MI=(SELECT MONTH (FechaIni));#Selecciona el mes
+       SET AI=(SELECT YEAR(FechaIni));  #Selecciona el año
+       SET DF=(SELECT DAY(FechaFin));
+       SET MF=(SELECT MONTH (FechaFin));
+       SET AF=(SELECT YEAR(FechaFin));
+     
+       IF (MI=2) THEN 
+         IF (DI=29) THEN  
+           SET DI=28; 
+         END IF;
+       END IF;
+       IF (MF=2) THEN 
+         IF (DF=29) THEN  
+           SET DF=28; 
+         END IF;
+       END IF;
+
+       SET DtoIni=(CASE MI 
+                 WHEN 1 THEN (SELECT En FROM AÑODECIMAL WHERE Dia=DI) 
+                 WHEN 2 THEN (SELECT Fb FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 3 THEN (SELECT Mz FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 4 THEN (SELECT Ab FROM AÑODECIMAL WHERE Dia=DI) 
+                 WHEN 5 THEN (SELECT My FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 6 THEN (SELECT Jn FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 7 THEN (SELECT Jl FROM AÑODECIMAL WHERE Dia=DI) 
+                 WHEN 8 THEN (SELECT Ag FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 9 THEN (SELECT Se FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 10 THEN (SELECT Oc FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 11 THEN (SELECT Nv FROM AÑODECIMAL WHERE Dia=DI)
+                 WHEN 12 THEN (SELECT Dc FROM AÑODECIMAL WHERE Dia=DI)
+                 END);
+
+       SET AñoIni=(SELECT AI + (CAST(DtoIni AS UNSIGNED)/1000));
+
+       SET DtoFin=(CASE MF 
+                 WHEN 1 THEN (SELECT En FROM AÑODECIMAL WHERE Dia=DF) 
+                 WHEN 2 THEN (SELECT Fb FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 3 THEN (SELECT Mz FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 4 THEN (SELECT Ab FROM AÑODECIMAL WHERE Dia=DF) 
+                 WHEN 5 THEN (SELECT My FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 6 THEN (SELECT Jn FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 7 THEN (SELECT Jl FROM AÑODECIMAL WHERE Dia=DF) 
+                 WHEN 8 THEN (SELECT Ag FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 9 THEN (SELECT Se FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 10 THEN (SELECT Oc FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 11 THEN (SELECT Nv FROM AÑODECIMAL WHERE Dia=DF)
+                 WHEN 12 THEN (SELECT Dc FROM AÑODECIMAL WHERE Dia=DF)
+                 END);
+     
+       SET AñoFin=(SELECT AF + (CAST(DtoFin AS UNSIGNED)/1000)); 
+    
+       SET AñoMedio=(AñoFin - AñoIni);  
+
+       SET AñoIni=(SELECT MAX(Año) FROM PESOLONGITUD WHERE Año<=AñoMedio) ;
+    
+       SET AñoFin=(SELECT MIN(Año) FROM PESOLONGITUD WHERE Año>=AñoMedio);
+
+       IF (AñoIni<AñoFin) THEN
+
+         SET DifIni = AñoMedio - AñoIni;
+    
+         SET DifFin = AñoFin - AñoMedio;
+
+         IF (DifIni<DifFin) THEN
+
+           SET rdoAño=AñoIni;
+
+         ELSE
+
+             SET rdoAño=AñoFin;
+
+         END IF;
+
+       ELSE
+
+           SET rdoAño=AñoFin;
+ 
+       END IF;
+
+       RETURN rdoAño;
+
+END
