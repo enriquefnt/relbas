@@ -33,7 +33,7 @@ right join persona on control.idPersona=persona.idPersona
 inner join aopzonas on AOP=idaop ;
 END
 
-CREATE DEFINER=`root`@`localhost` FUNCTION `ZSCORE`(Sexo VARCHAR (10),Bus VARCHAR(1), Valor DOUBLE,FechaInicial DATE,FechaFinal DATE) RETURNS double
+CREATE DEFINER=`root`@`localhost` FUNCTION `ZSCORE`(Sexo INT(1),Bus VARCHAR(1), Valor DOUBLE,FechaInicial DATE,FechaFinal DATE) RETURNS double
 BEGIN
    
      DECLARE Calculo,L,M,S,rdoAño DOUBLE;DECLARE EdadMes INT;
@@ -109,18 +109,18 @@ END
 
 
 
-CREATE DEFINER=`salasituacion`@`%` FUNCTION `VALORAÑO`( FechaIni DATE,FechaFin DATE) RETURNS double
+CREATE DEFINER=`root`@`localhost` FUNCTION `VALORAÑO`(Nacimiento DATE,FechaControl DATE) RETURNS double
 BEGIN
        DECLARE DI INT;DECLARE MI INT;DECLARE AI INT;DECLARE DF INT; DECLARE MF INT;DECLARE AF INT;
        DECLARE DtoIni VARCHAR(3);DECLARE DtoFin VARCHAR(3);DECLARE AñoIni DOUBLE;DECLARE AñoFin DOUBLE;
        DECLARE DifIni DOUBLE;DECLARE DifFin DOUBLE;DECLARE rdoAño DOUBLE;DECLARE AñoMedio DOUBLE;
     
-       SET DI=(SELECT DAY(FechaIni));   #Selecciona el día
-       SET MI=(SELECT MONTH (FechaIni));#Selecciona el mes
-       SET AI=(SELECT YEAR(FechaIni));  #Selecciona el año
-       SET DF=(SELECT DAY(FechaFin));
-       SET MF=(SELECT MONTH (FechaFin));
-       SET AF=(SELECT YEAR(FechaFin));
+       SET DI=(SELECT DAY(Nacimiento));   #Selecciona el día
+       SET MI=(SELECT MONTH (Nacimiento));#Selecciona el mes
+       SET AI=(SELECT YEAR(Nacimiento));  #Selecciona el año
+       SET DF=(SELECT DAY(FechaControl));
+       SET MF=(SELECT MONTH (FechaControl));
+       SET AF=(SELECT YEAR(FechaControl));
      
        IF (MI=2) THEN 
          IF (DI=29) THEN  
