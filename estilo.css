@@ -4,18 +4,19 @@
 }
 
 div {
-	margin: 10px;
-	border: all;
-	color: black;
-	background-color: lightgrey;
-	display: inline-flex;
-	width: auto;
-	text-align: center;
-	font-family: sans-serif;
-	padding:auto ;
-	text-decoration: none;
-	border-radius: 8px;
+  display: inline-block;
+  margin: 10px;
+  border: all;
+  color: black;
+  background-color: lightgrey;
+  width: auto;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 10px ;
+  text-decoration: none;
+  border-radius: 8px;
 }
+
 
 p {
 	color: darkgreen;
@@ -60,6 +61,19 @@ fieldset
     border-radius:8px;	
 }
 
+.formulario {
+  margin: 10px;
+  border: all;
+  color: black;
+  background-color: lightgrey;
+  display: inline-flex;
+  width: auto;
+  text-align: center;
+  font-family: sans-serif;
+  padding:auto ;
+  text-decoration: none;
+  border-radius: 8px;
+}
 
 .acWrap {
   display: inline-block; /* Or block if you like */

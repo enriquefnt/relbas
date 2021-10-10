@@ -11,8 +11,8 @@
 <?php
 $caso = [];
 	foreach ($casos as $caso) {
- echo $caso['Nombre'] . ' ' . $caso['Apellido'] .' ' .  $caso['Sexo'] .' ' . $caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ' .
- 	$caso['areaoperativa'] .' ' . $caso['Peso'].' ' . $caso['Talla'].'<br> ' 
+ echo $caso['Nombre'] . ' ' . $caso['Apellido'] .' ' .  $caso['Sexo'] .' ' .  $caso['areaoperativa'] .' ' .$caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ' .
+ 	' ' . $caso['Peso'].' ' . $caso['Talla'].' ' . $caso['ZPE'].' ' . $caso['ZTE'].' ' . $caso['ZIMC'].'<br> ' 
  ;
 	}
 ?>
