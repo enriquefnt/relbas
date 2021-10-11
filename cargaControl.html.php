@@ -70,7 +70,7 @@ $caso = [];
         <td><?= htmlspecialchars($caso['Nombre'] . ' ' . $caso['Apellido'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['areaoperativa'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
-        <td><?= htmlspecialchars($caso['FechaControl'], ENT_QUOTES, 'UTF-8'); ?></td>
+        <td><?= htmlspecialchars($caso['FechaCtrl'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['Peso'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['Talla'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['ZPE'], ENT_QUOTES, 'UTF-8'); ?></td>
@@ -82,7 +82,7 @@ $caso = [];
     </tbody>
  <?php
     }
-}//added missing brace
+}
 ?>
 </table>
 
