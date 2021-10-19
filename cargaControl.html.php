@@ -48,8 +48,8 @@
       <table>
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Area Operativa Nombre</th>
+       <!-- <th>Nombre</th>
+        <th>Area Operativa Nombre</th> -->
         <th>Edad (AMD)</th>
         <th>Fecha Control</th>
         <th>Peso</th>
@@ -67,8 +67,8 @@ $caso = [];
   if (isset($_POST['idPersona'])  && $caso['idPersona']==$_POST['idPersona']) { ?>
 <tbody>
 <tr>
-        <td><?= htmlspecialchars($caso['Nombre'] . ' ' . $caso['Apellido'], ENT_QUOTES, 'UTF-8'); ?></td>
-        <td><?= htmlspecialchars($caso['areaoperativa'], ENT_QUOTES, 'UTF-8'); ?></td>
+       <!-- <td><?= htmlspecialchars($caso['Nombre'] , ENT_QUOTES, 'UTF-8'); ?></td>
+        <td><?= htmlspecialchars($caso['areaoperativa'], ENT_QUOTES, 'UTF-8'); ?></td>-->
         <td><?= htmlspecialchars($caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['FechaCtrl'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($caso['Peso'], ENT_QUOTES, 'UTF-8'); ?></td>

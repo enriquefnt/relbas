@@ -13,7 +13,7 @@ $record = [
 							 	'Nacimiento' =>$_POST['Nacimiento'],
 							 	'Sexo' =>$_POST['Sexo'],
 							    'AOP' =>$_POST['AOP']];
-insert($pdo, 'persona', $record);
+insert ignore($pdo, 'persona', $record);
 		 
 
 }
