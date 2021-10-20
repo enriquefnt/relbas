@@ -33,9 +33,9 @@ $caso = [];
 
 		<tbody>
 			<tr>
-				<td><?= htmlspecialchars($caso['Nombre'], ENT_QUOTES, 'UTF-8'); ?></td>
-				<td><?= htmlspecialchars($caso['areaoperativa'], ENT_QUOTES, 'UTF-8'); ?></td>
-				<td><?= htmlspecialchars($caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
+				<td align="left"><?= htmlspecialchars($caso['Nombre'], ENT_QUOTES, 'UTF-8'); ?></td>
+				<td align="left"><?= htmlspecialchars($caso['areaoperativa'], ENT_QUOTES, 'UTF-8'); ?></td>
+				<td align="right"><?= htmlspecialchars($caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
 				<td><?= htmlspecialchars($caso['FechaCtrl'], ENT_QUOTES, 'UTF-8'); ?></td>
 				<td><?= htmlspecialchars($caso['Peso'], ENT_QUOTES, 'UTF-8'); ?></td>
 				<td><?= htmlspecialchars($caso['Talla'], ENT_QUOTES, 'UTF-8'); ?></td>
@@ -52,22 +52,7 @@ $caso = [];
 
 
 
-<!--
 
-	<div>
-		<p>
-<?php
-$caso = [];
-	foreach ($casos as $caso) {
- echo $caso['Nombre'] . ' ' . $caso['Apellido'] .' ' .  $caso['Sexo'] .' ' .  $caso['areaoperativa'] .' ' .$caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ' .
- 	' ' . $caso['Peso'].' ' . $caso['Talla'].' ' . $caso['ZPE'].' ' . $caso['ZTE'].' ' . $caso['ZIMC'].'<br> ' 
- ;
-	}
-?>
-
-</p>
-</div>
--->
 
 <div>
 <a href="index.html">Volver</a>
@@ -76,4 +61,3 @@ $caso = [];
 </div>
 </body>
 </html>
-

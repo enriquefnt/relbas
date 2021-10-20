@@ -29,6 +29,7 @@ insert($pdo, 'control', $record);
 $sql='call lista_simple;';
 
 $casos = $pdo->query($sql);
+//header('Location: vercontrol.php')	;	
 
 		include  __DIR__ . '/cargaControl.html.php';
 
