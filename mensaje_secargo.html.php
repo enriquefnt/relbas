@@ -6,7 +6,12 @@
 	<title>Datos Antro</title>
 </head>
 <body>
-<h2>Se cargo su registro correctamente</h2>
+	<div>
+<h3>Se cargo el registro correctamente</h3>
+
+</div>
+<div>
+
 <nav>
 <ul>
 	<li><a href="cargaDatos.php">Cargar Datos</a></li>
@@ -15,5 +20,6 @@
 </ul>
 
 </nav>
+</div>
 </body>
 </html>

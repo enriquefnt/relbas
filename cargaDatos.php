@@ -4,8 +4,7 @@
 include __DIR__ . '/conect.php';
 include __DIR__ . '/funciones.php';
 
-$query = query($pdo,'SELECT COUNT(*) FROM persona WHERE Nombre="tretosi" ');
-	$row = $query->fetch();
+
 
 if ((isset($_POST['Nombre'])) && $row != 0) {
 	echo "Registro repetido, controle";
@@ -22,20 +21,16 @@ $record = [
 							    'AOP' =>$_POST['AOP']];
 insert ($pdo, 'persona', $record);
 session_unset();
-header('Location: mensaje_secargo.html')	;	 
+header('Location: mensaje_secargo.html.php')	;	 
 
 }
 else {
 	session_unset();
-//session_destroy();
+
 }
 
-// remove all session variables
-
-
-// destroy the session
-//session_destroy();
-
+$query = query($pdo,'SELECT COUNT(*) FROM persona WHERE Nombre="torres" ');
+	$row = $query->fetch();
    
 
 $result = findAll($pdo, 'aopzonas');

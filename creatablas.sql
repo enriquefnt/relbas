@@ -16,12 +16,13 @@ CREATE TABLE `control` (
   `idcontrol` int(11) NOT NULL AUTO_INCREMENT,
   `idPersona` int(11) NOT NULL,
   `FechaControl` date NOT NULL,
-  `Peso` decimal(3,0) NOT NULL,
-  `Talla` decimal(3,0) NOT NULL,
+  `Peso` decimal(5,2) NOT NULL,
+  `Talla` decimal(5,2) NOT NULL,
   `Observaciones` varchar(455) DEFAULT NULL,
   PRIMARY KEY (`idcontrol`),
   UNIQUE KEY `idcontrol_UNIQUE` (`idcontrol`)
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=205 DEFAULT CHARSET=utf8mb4;
+
 
 
 CREATE TABLE `AÑODECIMAL` (

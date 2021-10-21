@@ -15,8 +15,8 @@ $record = [
 							 	'Talla' =>$_POST['Talla'],
 							    'Observaciones' =>$_POST['Observaciones']];
 insert($pdo, 'control', $record);
-		 
-
+//	header('Location: vercontrol.php')	;		 
+header('Location: mensaje_secargo.html.php')	;	
 }
 
 }
@@ -29,9 +29,9 @@ insert($pdo, 'control', $record);
 $sql='call lista_simple;';
 
 $casos = $pdo->query($sql);
-//header('Location: vercontrol.php')	;	
+//
 
 		include  __DIR__ . '/cargaControl.html.php';
 
-
+//header('Location: vercontrol.php')	;	
 

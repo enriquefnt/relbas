@@ -24,8 +24,10 @@
     
 
 <?php
+
+
 $caso = [];
- foreach ($casos as $caso) {
+ foreach ($casos as $caso): {
   if (isset($_POST['idPersona'])  && $caso['idPersona']==$_POST['idPersona']) { ?>
 <tbody>
 <tr>
@@ -45,13 +47,14 @@ $caso = [];
  <?php
     }
 }
+endforeach;
 ?>
 </table>
 </div>
 
 <div>
 <nav>
-<ul>
+<ul style="list-style-type:none;">
 	<li><a href="cargaDatos.php">Cargar Datos</a></li>
 	<li><a href="cargaControl.php">Cargar Control</a></li>
 	<li><a href="verlista.php">Ver</a></li>
