@@ -1,18 +1,4 @@
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `lista_simple`()
-BEGIN
-SELECT idaop, persona.idPersona, control.idcontrol, concat(Nombre, ' ', Apellido) AS Nombre, date_format(FechaControl,"%d/%m/%y") AS FechaCtrl, areaoperativa,
-IF (FechaControl <> "31/12/25",floor(DATEDIFF(FechaControl, Nacimiento)/365.25),floor(DATEDIFF(CURDATE(), Nacimiento)/365.25))  AS años,
-IF (FechaControl <> "31/12/25",floor((DATEDIFF(FechaControl, Nacimiento)%365.25)/30.4375),floor((DATEDIFF(CURDATE(), Nacimiento)%365.25)/30.4375))  AS meses,
-IF (FechaControl <> "31/12/25",floor(datediff(FechaControl, Nacimiento) % 30.4375),floor(datediff(CURDATE(), Nacimiento) % 30.4375))  AS dias,
-Peso, Talla,
-if(ROUND(ZSCORE(Sexo,'P',Peso,Nacimiento,FechaControl),2) between -6 and 6,(ROUND(ZSCORE(Sexo,'P',Peso,Nacimiento,FechaControl),2)),"Error") as ZPE,
-if(ROUND(ZSCORE(Sexo,'T',Talla,Nacimiento,FechaControl),2) between -6 and 6,(ROUND(ZSCORE(Sexo,'T',Talla,Nacimiento,FechaControl),2)),"Error") as ZTE,
-if(ROUND(ZSCORE(Sexo,'I',(Peso/((Talla/100)*(Talla/100))),Nacimiento,FechaControl),2) between -6 and 6,(ROUND(ZSCORE(Sexo,'I',(Peso/((Talla/100)*(Talla/100))),Nacimiento,FechaControl),2)),"Error") as ZIMC
- FROM control
-right join persona on control.idPersona=persona.idPersona
-inner join aopzonas on AOP=idaop ;
-END
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `VALORAÑO`(Nacimiento DATE,FechaControl DATE) RETURNS double
 BEGIN
@@ -186,6 +172,7 @@ BEGIN
 END
 
 
+<<<<<<< HEAD
 
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `VALORAÑO`(Nacimiento DATE,FechaControl DATE) RETURNS double
